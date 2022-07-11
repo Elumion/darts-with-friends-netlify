@@ -2,4 +2,38 @@ body {
     background-image: url(../public/assets/layered-waves-haikei.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: #fff;
+    font-family: cursive, sans-serif;
+}
+
+.App {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100vh;
+}
+
+.names {
+    list-style-type: number;
+    margin: 20px 0 0 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.names li,
+.names div {
+    font-size: 1.2rem;
+    overflow-wrap: anywhere;
+}
+
+.start {
+    margin: 15px auto 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    padding: 10px 0;
+    width: 100%;
 }
