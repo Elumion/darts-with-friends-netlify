@@ -73,8 +73,9 @@ const Counter = ({ players, sets, resetGame }: Props) => {
           <p>Now Turn:</p>
           <h3>{playerNow.player}</h3>
           <p>Score:</p>
-          <input type="text" ref={scoreInput} />
+          <input className="main-input" type="text" ref={scoreInput} />
           <button
+            className="main-button"
             disabled={show}
             onClick={() => handleScore(playerId, scoreInput.current)}
           >

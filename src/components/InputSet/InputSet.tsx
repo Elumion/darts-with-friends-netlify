@@ -11,12 +11,14 @@ const InputSet = ({ saveFunc, label }: Props) => {
   return (
     <div>
       <input
+        className="main-input"
         type="text"
         value={text}
         placeholder={label}
         onChange={(e) => setText(e.target.value)}
       />
       <button
+        className="main-button"
         onClick={() => {
           saveFunc(text);
           setText("");

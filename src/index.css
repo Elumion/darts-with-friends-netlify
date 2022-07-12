@@ -3,7 +3,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    font-family: cursive, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div {
+    font-size: 18px;
 }
 
 .App {
@@ -13,6 +16,10 @@ body {
     align-items: center;
     /* justify-content: center; */
     height: 100vh;
+}
+
+.container {
+    width: 290px;
 }
 
 .names {
@@ -67,4 +74,13 @@ body {
 .reset-btn {
     margin: 20px 0;
     width: 100%;
+}
+
+.main-input {
+    font-size: 18px;
+    padding: 12px 0;
+}
+.main-button {
+    display: inline-block;
+    padding: 13px 10px;
 }

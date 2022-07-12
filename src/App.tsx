@@ -47,6 +47,7 @@ function App() {
           <>
             <p>Sets number</p>
             <input
+              className="main-input"
               type="text"
               placeholder="Number of sets"
               value={sets}
@@ -57,6 +58,7 @@ function App() {
               }
             />
             <button
+              className="main-button"
               onClick={() => {
                 setPlay(true);
               }}
