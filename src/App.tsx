@@ -21,6 +21,12 @@ function App() {
     console.log(save, sets);
   }, [save, sets]);
 
+  const resetGame = () => {
+    setStart(false);
+    setSets(3);
+    setPlay(false);
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -28,8 +34,8 @@ function App() {
           <>
             <InputSet label="Nickname" saveFunc={savePlayers}></InputSet>
             <ul className="names">
-              {save.map((el: string) => (
-                <li key={el}>{el}</li>
+              {save.map((el: string, id: number) => (
+                <li key={el}>{`${id + 1}) ${el}`}</li>
               ))}
             </ul>
             <button className="start" onClick={() => setStart(true)}>
@@ -59,7 +65,7 @@ function App() {
             </button>
           </>
         )}
-        {play && <Counter players={save} sets={sets} />}
+        {play && <Counter resetGame={resetGame} players={save} sets={sets} />}
       </div>
     </div>
   );
