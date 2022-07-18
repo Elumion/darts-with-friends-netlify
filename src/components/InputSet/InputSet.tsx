@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 
 interface Props {
   label: string;
@@ -7,7 +7,7 @@ interface Props {
 
 const InputSet = ({ saveFunc, label }: Props) => {
   const [text, setText] = useState("");
-
+  const ref = useRef<null | HTMLInputElement>(null);
   return (
     <div>
       <input
@@ -16,12 +16,15 @@ const InputSet = ({ saveFunc, label }: Props) => {
         value={text}
         placeholder={label}
         onChange={(e) => setText(e.target.value)}
+        ref={ref}
       />
       <button
         className="main-button"
         onClick={() => {
           saveFunc(text);
           setText("");
+
+          ref?.current?.focus();
         }}
       >
         ADD

@@ -52,6 +52,8 @@ const Counter = ({ players, sets, resetGame }: Props) => {
         setShow(true);
       }
     }
+
+    score.focus();
   };
 
   const calculateResults = () => {
